@@ -1,0 +1,484 @@
+/* =========================================================
+   GreenLeaf Nursery — Design Tokens
+   A plant nursery needs to feel grown, not manufactured:
+   deep leaf greens, warm terracotta (the colour of the pots),
+   and a soft linen background instead of stark white.
+   ========================================================= */
+:root {
+    --forest: #23422F;
+    --forest-deep: #16281C;
+    --sage: #7C9473;
+    --terracotta: #BF5B32;
+    --terracotta-dark: #9C4726;
+    --cream: #FBF7EE;
+    --linen: #F1EAD9;
+    --ink: #22281F;
+    --muted: #5C6656;
+    --white: #FFFFFF;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --shadow-soft: 0 12px 30px rgba(22, 40, 28, 0.10);
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background-color: var(--cream);
+    line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--forest-deep);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    line-height: 1.2;
+}
+
+p {
+    color: var(--muted);
+}
+
+a {
+    color: var(--forest);
+}
+
+.text-success {
+    color: var(--terracotta) !important;
+}
+
+.bg-success-subtle {
+    background-color: #EFE4D6 !important;
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+
+/* Section kicker — a quiet label, not a shouty tracked-out eyebrow */
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--terracotta-dark);
+    margin-bottom: 6px;
+}
+
+    .kicker i {
+        font-size: 0.8rem;
+    }
+
+.section-description {
+    max-width: 620px;
+}
+
+.bg-light {
+    background-color: var(--linen) !important;
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn-success {
+    background-color: var(--terracotta);
+    border-color: var(--terracotta);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 1.5rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+    .btn-success:hover, .btn-success:focus {
+        background-color: var(--terracotta-dark);
+        border-color: var(--terracotta-dark);
+        color: var(--white);
+        transform: translateY(-1px);
+    }
+
+.btn-outline-success {
+    color: var(--forest);
+    border: 1.5px solid var(--forest);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    background: transparent;
+}
+
+    .btn-outline-success:hover {
+        background-color: var(--forest);
+        border-color: var(--forest);
+        color: var(--white);
+    }
+
+.btn-light {
+    background-color: var(--cream);
+    color: var(--forest-deep);
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+}
+
+    .btn-light:hover {
+        background-color: var(--white);
+        color: var(--forest-deep);
+    }
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+.navbar {
+    min-height: 76px;
+    background-color: var(--cream) !important;
+    border-bottom: 1px solid var(--linen);
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--forest);
+    color: var(--white);
+    border-radius: 12px 4px 12px 4px; /* leaf-like asymmetric corner */
+    font-size: 18px;
+}
+
+.navbar-brand {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--forest-deep) !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--ink) !important;
+    margin-left: 6px;
+    padding: 8px 14px !important;
+    border-radius: 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+    .nav-link:hover {
+        color: var(--terracotta-dark) !important;
+    }
+
+    .nav-link.active {
+        color: var(--terracotta-dark) !important;
+        background-color: #F1E4D8;
+    }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero-section {
+    padding: 70px 0 90px;
+    background: linear-gradient(180deg, var(--linen) 0%, var(--cream) 100%);
+}
+
+    .hero-section .lead {
+        font-size: 1.15rem;
+        max-width: 480px;
+    }
+
+/* The one bold, memorable move on the page: an organic, leaf-like
+   image mask instead of a plain rectangle or a generic rounded card. */
+.hero-image-frame {
+    position: relative;
+}
+
+    .hero-image-frame img {
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        border-radius: 62% 38% 55% 45% / 45% 40% 60% 55%;
+        box-shadow: var(--shadow-soft);
+    }
+
+    .hero-image-frame::after {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: -24px;
+        width: 120px;
+        height: 120px;
+        background-color: var(--terracotta);
+        opacity: 0.14;
+        border-radius: 62% 38% 55% 45% / 45% 40% 60% 55%;
+        z-index: -1;
+    }
+
+/* =========================================================
+   Feature / Value cards
+   ========================================================= */
+.feature-card {
+    background-color: var(--white);
+    border: 1px solid var(--linen);
+    border-radius: var(--radius-md);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-soft);
+    }
+
+.icon-box {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8EEE3;
+    color: var(--forest);
+    border-radius: 12px 4px 12px 4px;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   Plant cards
+   ========================================================= */
+.plant-card {
+    border: 1px solid var(--linen);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .plant-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-soft);
+    }
+
+    .plant-card img {
+        height: 210px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .plant-card .card-title {
+        font-family: 'Fraunces', serif;
+        font-weight: 600;
+    }
+
+    .plant-card .badge {
+        font-weight: 600;
+        border-radius: 20px;
+        padding: 5px 12px;
+    }
+
+/* =========================================================
+   Service cards
+   ========================================================= */
+.service-card {
+    border: 1px solid var(--linen) !important;
+    border-radius: var(--radius-md) !important;
+    background-color: var(--white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-soft) !important;
+    }
+
+/* =========================================================
+   CTA sections
+   ========================================================= */
+.cta-section {
+    background-color: var(--forest);
+}
+
+    .cta-section h2 {
+        color: var(--white);
+    }
+
+/* =========================================================
+   Contact form
+   ========================================================= */
+.form-label {
+    font-weight: 600;
+    color: var(--forest-deep);
+}
+
+.input-group-text {
+    background-color: var(--white);
+    border-right: none;
+    color: var(--sage);
+}
+
+.form-control, .form-select {
+    border-color: #DDD3BE;
+    padding: 0.6rem 0.9rem;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: var(--sage);
+        box-shadow: 0 0 0 0.2rem rgba(124, 148, 115, 0.25);
+    }
+
+.input-group .form-control {
+    border-left: none;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.site-footer {
+    background-color: var(--forest-deep);
+    color: #C9D2C3;
+    padding-top: 55px;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    font-family: 'Fraunces', serif;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .footer-logo i {
+        color: var(--terracotta);
+    }
+
+.footer-text {
+    color: #A9B5A2;
+    line-height: 1.7;
+    max-width: 380px;
+}
+
+.footer-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links a {
+        color: #A9B5A2;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+    .footer-links i {
+        margin-right: 7px;
+        color: var(--terracotta);
+    }
+
+.footer-contact {
+    display: flex;
+    gap: 12px;
+    color: #A9B5A2;
+    margin-bottom: 14px;
+}
+
+    .footer-contact i {
+        color: var(--terracotta);
+        margin-top: 4px;
+    }
+
+.social-links {
+    margin-top: 20px;
+}
+
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #223A2A;
+        color: var(--white);
+        border-radius: 50%;
+        margin-right: 7px;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+
+        .social-links a:hover {
+            background-color: var(--terracotta);
+            transform: translateY(-3px);
+        }
+
+.footer-line {
+    border-color: #2E4536;
+    margin: 35px 0 20px;
+}
+
+.copyright {
+    color: #8FA087;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+@media (max-width: 991px) {
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 14px !important;
+    }
+
+        .nav-link.active::after {
+            display: none;
+        }
+
+    .hero-image-frame img {
+        height: 300px;
+        border-radius: var(--radius-md);
+    }
+
+    .hero-image-frame::after {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feature-card, .plant-card, .service-card, .btn-success, .social-links a {
+        transition: none;
+    }
+}

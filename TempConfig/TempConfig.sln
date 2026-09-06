@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37516.0 d17.14
+VisualStudioVersion = 17.14.37516.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempConfig", "TempConfig\TempConfig.csproj", "{1C4FC457-4C87-4F00-8D20-769D70646055}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temp3", "Temp3\Temp3.csproj", "{3CD3D90D-7189-4C74-8361-F71EEA169449}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temp4", "Temp4\Temp4.csproj", "{0B43C87E-22F9-45F2-B13C-54B6915A512F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temp5", "Temp5\Temp5.csproj", "{33D71223-C3E2-4AFD-AE7C-6AD916013A05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0B43C87E-22F9-45F2-B13C-54B6915A512F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B43C87E-22F9-45F2-B13C-54B6915A512F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B43C87E-22F9-45F2-B13C-54B6915A512F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D71223-C3E2-4AFD-AE7C-6AD916013A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D71223-C3E2-4AFD-AE7C-6AD916013A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D71223-C3E2-4AFD-AE7C-6AD916013A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D71223-C3E2-4AFD-AE7C-6AD916013A05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
