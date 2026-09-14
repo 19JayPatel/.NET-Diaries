@@ -1,4 +1,10 @@
-# 📖 .NET Diaries
+# .NET Diaries
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=cs" alt="C#" width="180" />
+</p>
+
+---
 
 > *A journey of learning, coding, and building with .NET — where every line of code tells a story.*
 
